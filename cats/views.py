@@ -12,6 +12,8 @@ from .throttling import WorkingHoursRateThrottle
 
 
 class CatViewSet(viewsets.ModelViewSet):
+    """Информация о котиках."""
+
     queryset = Cat.objects.all()
     serializer_class = CatSerializer
     permission_classes = (OwnerOrReadOnly,)
